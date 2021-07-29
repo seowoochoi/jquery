@@ -1,0 +1,8 @@
+--IE에서 css('background-posion-x')값을 못 받아 올 때
+
+Element의 CSS를 'background-posion : 50% 50%;'로 주었을 때를 가정
+
+Chrome이나 Edge, FF는 background-posion-x를 Jquury의 $(element).css("background-posion-x")함수로 값을 받아올 수 있지만,
+IE11에서는 이상하게도 받아올 수 없어, 순수 자바스크립트(element.style.backgroundPosionX)로 받아왔다.
+
+
