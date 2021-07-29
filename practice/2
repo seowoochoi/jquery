@@ -1,0 +1,24 @@
+--Selectbox 정렬(다중) / 순서바꾸기
+function up(){
+  var selected = $j('#'+selectvoxId+'option:selected'); -- selectbot의 객체 + 선택된 option을 구함
+  if(selected[0].previousElementSibling == null) return; -- 선택된 옵션중 가장 첫번째 옵션이 맨위면 return
+  
+  $j(selected).each(function(index, obj){
+    $j(ojb).insertBefore($j(ojb).prev());
+    -- 1. insertBefore: 선택된 option의 앞(위치)에 삽입
+    -- 2. prev : 선택된 option의 이전 요소를 변환
+    -- 결과 : insertBefore자리(위치)에 prev의 반환값이 삽입됨
+  });
+};
+
+function down(){
+  var selected = $j('#'+selectboxId+'option:selected'); -- selectbox의 객체 + 선택된 option을 구함
+  if(selected.last().next().length ==0) return; -- 선택된 옵션중 가장 마지막 옵션이 맨 아래면 return
+  
+  $j(selected.get().reverse()).each(function(index, obj){ -- 선택된 옵션을 reverse함(선택된 순서를 거꾸로 함)
+      $j(obj).insertAfter($j(obj).next());
+      -- 1.insertAfter : 선택된 option의 뒤(위치)에 삽입
+      -- 2.next : 선택된 option의 다음 요소를 반환
+      -- 결과 : insertAfter 자리(위치)에 next의 반환값이 삽입됨
+  });
+};
