@@ -1,0 +1,35 @@
+--실행버튼 누르면 애니메이션 효과 실행
+$(function(){
+  $('#run').click(function(){
+    $('#block').animate({
+      width: '70%',
+      opacity: 0.5,
+      fontSize: '3em',
+      borderWidth: '5px',
+      marginLeft: '10px'
+      },  2000);
+    });
+});
+
+--수정 완료
+$(function(){
+  $('#run').click(function(){
+    if($('#block').css('marginLeft') == "0px"){
+      $('#block').animate({
+        width: '70%',
+        opacity: 0.5,
+        fontSize: '3em',
+        borderWidth: '5px',
+        marginLeft: '10px'
+      }, 1000);
+      } else {
+        $('#block').animate({
+          width: '100px',
+          opacity: 1,
+          fontSize: '1em',
+          borderWidth: '1px',
+          marginLeft: '0px'
+        }, 1000);
+      }
+  });
+});
