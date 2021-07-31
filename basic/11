@@ -1,0 +1,11 @@
+<script>
+  $(function(){
+    $("p").on("click", function(){
+      $("p").css("color","red");
+      });
+  });
+</script>
+
+<body>
+  <p>마우스로 글씨는 클릭해보세요!</p>
+</body>
