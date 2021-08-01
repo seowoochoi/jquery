@@ -1,0 +1,18 @@
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script>
+    $(function(){
+      $("button").on("click", function(){
+        // <img>요소의 src 속성값을 읽어오는 getter 메소드
+        var imgSrc = $("img").attr("src");
+        // <img>요소의 src 속성값을 새로운 값으로 설정하는 setter 메소드
+        $("img").attr("src","/examples/images/img_flag.png");
+      });
+    });
+  </script>
+  
+  <body>
+    <h1>attr()메소드</h1>
+    <p>아래의 버튼을 누르면 다음 이미지로 변경</p>
+    <button>버튼</button><br><br>
+    <img src="/examples/images/img_flower.png" style="width: 320px; height:240px; border: 1px solid black">
+  </body>
