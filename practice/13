@@ -1,0 +1,18 @@
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script>
+    $(function(){
+      $("button").on("click", function(){
+        $("#list").append("<li>새로 추가된 아이템</li?");
+      });
+    });
+  </script>
+  
+  <body>
+    <h1>.append() 메소드</h1>
+    <ul id= "list">
+      <li>첫번쨰 아이템</li>
+      <li>두번쨰 아이템</li>
+      <li>세번쨰 아이템</li>
+    </ul>
+    <button>버튼</button>
+  </body>
