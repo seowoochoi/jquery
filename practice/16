@@ -1,0 +1,35 @@
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script>
+    $(function(){
+      $("button").on("click", function(){
+        $("<b>새로 추가된  콘텐츠").prependTo(".item");
+       });
+    });
+  </script>
+  
+  <body>
+    <h1>.prependTo() 메소드</h1>
+    <ul>
+      <li class="item">첫번쨰 아이템</li>
+      <li class="item">첫번쨰 아이템</li>
+      <li>세번쨰 아이템</li>
+    </ul>
+    <button>콘텐츠 추가</button>
+  </body>
+  
+  < --
+ 기존 요소의 내부에 새로운 요소나 콘텐츠를 추가해주는 메소드 
+.append() 선택한 요소의 마지막에 새로운 요소나 콘텐츠를 추가함.
+.prepend() 선택한 요소의 처음에 새로운 요소나 콘텐츠를 추가함.
+.appendTo() 선택한 요소를 해당 요소의 마지막에 삽입함.
+.prependTo() 선택한 요소를 해당 요소의 처음에 삽입함.
+.html() 해당 요소의 HTML 콘텐츠를 반환하거나 설정함.
+.text()	해당 요소의 텍스트 콘텐츠를 반환하거나 설정함.
+
+기존 요소의 외부에 추가
+다음 메소드를 사용하면 기존 요소의 앞이나 뒤에 새로운 요소나 콘텐츠를 추가할 수 있습니다.
+1. .before()
+2. .after()
+3. .insertBefore()
+4. .insertAfter()
+-- >
