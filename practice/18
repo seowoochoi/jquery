@@ -1,0 +1,30 @@
+<head>
+  <meta charset="UTF-8">
+  <title>JQuery</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <style>
+    table, tr, td {
+      border : 2px solid red;
+      border-collapse: collapse;
+    }
+    table { matgin-bottom: 15px; }
+  </style>
+  <script>
+    $(function(){
+      $("button").on("click", function(){
+      // id가 "firstRow" 인 요소의 바로 뒤에 새로운 <tr>요소를 추가함;
+        $("#firstRow").after("<tr><td>새로운 행</td><tr>");
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <table>
+    <tr id= "firstRow">
+    <td>첫번쨰 셀</td>
+    <td>두번쨰 셀</td>
+    </tr>
+  </table>
+  <button> 행 추가</button>
+</body>
