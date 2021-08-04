@@ -1,0 +1,25 @@
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Element Insert</title>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<style>
+    div { margin: 10px; }
+    .content { border: 2px solid yellow; }
+    .wrapper { border: 2px slid green; }
+  </style>
+  <script>
+    $(function(){
+      $("button").on("click", function(){
+      // class가 "content"인 요소를 포함하는 새로운 요소를 추가함
+        $(".content").wrap("<div class='wrapper'></div>")
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <h1>.wrap() 메소드</h1>
+  <div class="content">첫번쨰</div>
+  <div class="content">두번쨰</div>
+  <button>div 요소 추가</button>
+</body>
