@@ -1,0 +1,19 @@
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script>
+    $(function(){
+      $("button").on("click", function(){
+        // id가 "firstitem"인 요소를 복사하여 id가 "list"인 요소에 추가함
+        $("#firstitem").clone().appendTo("#list");
+       });
+    });
+  </script>
+  
+  <body>
+    <h1>clone() 메소드</h1>
+    <ul id="list">
+      <li id="firstitem">첫번쨰</li>
+      <li>두번쨰</li>
+      <li>세번쨰</li>
+    <ul>
+    <button>아이템</button>
+  </body>
