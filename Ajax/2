@@ -1,0 +1,23 @@
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Node Manage</title>
+</head>
+
+<body>
+  <h1>appendChild() 메소드</h1>
+	<h2 id="item">JavaScript</h2>
+	<div id="list">
+		<p>HTML</p>
+		<p>CSS</p>
+		<p>JQuery</p>
+	</div>
+  <button onclick="appendNode()">노드추가</button>
+  
+  <script>
+    function(){
+      var parent = document.getElementById("list");
+      var newItem = document.getElementById("item");
+      parent.appendChild(newItem);
+    }
+  </script>
+</body>
