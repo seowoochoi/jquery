@@ -1,0 +1,21 @@
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Ajax Intro</title>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script>
+    $(function(){
+      $("#requestBtn").on("click", function(){
+        $("#text").load("/examples/media/jquery_ajax_data.txt")
+      });
+    });
+  	</script>
+    
+    <body>
+
+	<h1>제이쿼리와 Ajax</h1>
+	<p id="text">다른 텍스트를 옴</p>
+	<button id="requestBtn">데이터 불러오기!</button>
+	
+</body>
+
+</head>
