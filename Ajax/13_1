@@ -1,0 +1,7 @@
+<?php
+
+    header("testheader: 123");
+
+?>
+
+<p id="ajax_text">Ajax에서는 서버로부터 전달받은 HTTP 응답 헤더의 내용을 확인</p>
