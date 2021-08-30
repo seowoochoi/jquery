@@ -1,0 +1,28 @@
+<head>
+	<meta charset="UTF-8">
+	<title>Ajax Response Header</title>
+	<script>
+		function sendRequest() {
+			var httpRequest = new XMLHttpRequest();
+			httpRequest.onreadystatechange = function() {
+				if (httpRequest.readyState == XMLHttpRequest.DONE && httpRequest.status == 200 ) {
+					document.getElementById("text").innerHTML = httpRequest.responseText;
+					document.getElementById("header").innerHTML = httpRequest.getAllResponseHeaders();
+					document.getElementById("user").innerHTML = "testheader: " + httpRequest.getResponseHeader("testheader");
+				}
+			};
+			httpRequest.open("GET", "/examples/media/ajax_response_header.php", true);
+			httpRequest.send();
+		}
+	</script>
+</head>
+
+<body>
+
+	<h1>HTTP 응답 헤더</h1>
+	<button type="button" onclick="sendRequest()">Ajax 요청 보내기!</button>
+	<p id="text"></p>
+	<p id="header"></p>
+	<p id="user"></p>
+	
+</body>
