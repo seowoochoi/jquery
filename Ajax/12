@@ -1,0 +1,26 @@
+<head>
+	<meta charset="UTF-8">
+	<title>Ajax Request Header</title>
+	<script>
+		function sendRequest() {
+			var httpRequest = new XMLHttpRequest();
+			httpRequest.onreadystatechange = function() {
+				if (httpRequest.readyState == XMLHttpRequest.DONE && httpRequest.status == 200 ) {
+					document.getElementById("text").innerHTML = httpRequest.responseText;
+				}
+			};
+			httpRequest.open("GET", "/examples/media/ajax_request_header.php", true);
+			httpRequest.setRequestHeader("testheader", "123");
+			httpRequest.send();
+		}
+	</script>
+</head>
+
+<body>
+
+	<h1>HTTP 요청 헤더</h1>
+	<button type="button" onclick="sendRequest()">Ajax 요청 보내기</button>
+	<p>setRequestHeader() 메소드로 추가한 testheader 헤더가 123의 값을 가지고 요청 헤더에 추가되어 전송</p>
+	<p id="text"></p>
+	
+</body>
