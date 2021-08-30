@@ -1,0 +1,13 @@
+<?php // HTTP 요청 헤더의 이름과 값을 모두 출력함.
+
+    header("Content-Type: text/plain");
+
+    $requestHeaders = apache_request_headers();
+
+    foreach ($requestHeaders as $requestHeaders => $value) {
+
+        echo nl2br("$requestHeaders: $value\n");
+
+    }
+
+?>
